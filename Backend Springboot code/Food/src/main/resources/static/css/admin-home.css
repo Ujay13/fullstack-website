@@ -1,0 +1,94 @@
+
+body {
+    font-family: Arial, sans-serif;
+	background: #fff8f8;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ---------------- TABLE BUTTONS ---------------- */
+.tablebutton {
+    width: 67px;
+    border-radius: 8px;
+    border: 0px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.tablebutton:hover {
+    border: 2px solid black;
+}
+
+.tablebutton:active {
+    transform: scale(1.02);
+    background-color: rgb(255, 202, 202); /* slightly lighter red on click */
+}
+
+/* ---------------- TABLE ---------------- */
+.table-responsive {
+    width: 80%;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header remains red and never changes on hover */
+thead {
+    background-color: red;
+    color: white;
+}
+
+th {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Table body rows */
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Only tbody rows have hover effect */
+tbody tr:hover {
+    background-color: rgb(255, 232, 232); /* light red hover */
+}
+
+/* Optional: alternate row background */
+tbody tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/*HYPERTAG*/
+
+.linkcolor{
+	text-decoration: none;
+	color: inherit; /* inherit from parent, here button */
+	display: inline-block; /* helps with button styling */
+}
+.linkcolor:hover{
+	text-decoration: none;
+	color: inherit; /* inherit from parent, here button */
+	display: inline-block; /* helps with button styling */
+}
+
+/*NAVBAR*/
+
+#nav{
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(255, 0, 0);
+  color: white;  
+}

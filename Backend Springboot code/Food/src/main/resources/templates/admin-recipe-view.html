@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="/css/admin-recipe-view.css">
+</head>
+<body>
+    <div class="container">
+        <div class="recipe-card">
+            <h2 th:text="${recipe.title}" style="color:  rgb(255, 0, 0);">Recipe Title</h2>
+
+            <p><strong style="color:  rgb(255, 0, 0);">Created By:</strong> <b><span th:text="${recipe.user.fullname}">John Doe</b></span></p>
+
+            <div class="image-container">
+                <img th:src="@{${recipe.image}}" alt="Recipe Image" height= "470px",width= "450px", objectFit= "cover">
+            </div>
+
+            <div class="recipe-section">
+                <h3>Ingredients</h3>
+                <p th:text="${recipe.incredients}"><b>Ingredients list...</b></p>
+            </div>
+
+            <div class="recipe-section">
+                <h3>Steps</h3>
+                <p th:text="${recipe.steps}"><b>Cooking instructions...</b></p>
+            </div>
+
+            <div class="info-grid">
+                <p><strong style="color:  rgb(255, 0, 0);">Cooking Time:</strong> <span th:text="${recipe.cookingTime}"><b>30 mins</b></span></p>
+                <p><strong style="color:  rgb(255, 0, 0);">Difficulty Level:</strong> <span th:text="${recipe.difficultyLevel}"><b>Medium</b></span></p>
+
+            </div>
+
+            <a href="/admin/recipes" class="btn back">Back to Recipes</a>
+        </div>
+    </div>
+</body>
+</html>

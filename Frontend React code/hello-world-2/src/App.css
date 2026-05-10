@@ -1,0 +1,935 @@
+
+
+
+#table{
+  position: inherit;
+  left: 100px;
+  top: 35px;
+}
+
+.place{
+  width: 450px;
+}
+
+/* button{
+    width: 200px;
+    height: 50px;
+} */
+
+/* ____________________________________________________________Register__________________________________________________________________________________________________________ */
+
+/* _____________________________ Responsive Fix for Register Page _____________________________ */
+
+/* Keep card size fluid and centered */
+.register-card {
+  width: 100%;
+  max-width: 500px;
+  min-height: 600px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  padding: 25px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Login link hover fix */
+.no-underline-link {
+  text-decoration: none;
+}
+.no-underline-link:hover {
+  text-decoration: none;
+  color: red;
+}
+
+/* Fix global old selectors overriding mobile layout */
+#card,
+#table {
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+/* Responsive for mobile/tablet */
+@media (max-width: 768px) {
+  .register-card {
+    width: 90%;
+    min-height: auto;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .img {
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+  }
+
+  .button {
+    width: 100%;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .place {
+    width: 100%;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+}
+
+/* Extra small devices (phones < 500px) */
+@media (max-width: 500px) {
+  .register-card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    height: 42px;
+  }
+
+  input,
+  textarea {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+/* _____________________________________________________________LOGIN________________________________________________________________________________________________________ */
+
+/* __________________________ Responsive Fix for Login Page __________________________ */
+
+/* Override absolute positioning for mobile view */
+#cards,
+#table {
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+}
+
+/* Tablet and small laptops */
+@media (max-width: 768px) {
+  .login-card {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .place {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+/* Phones and small devices */
+@media (max-width: 500px) {
+  .login-card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    height: 42px;
+  }
+
+  input {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+#cards {
+  width: 100%;
+  max-width: 450px;
+  min-height: 400px;
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+  background-color: rgba(255, 255, 255, 0.82);
+  border-radius: 10px;
+  padding: 30px;
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+
+/* Also fix .place so it doesn't overflow! */
+.place {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #cards {
+    width: 94%;
+    padding: 16px;
+    margin: 24px auto;
+  }
+  .place {
+    font-size: 1rem;
+    padding: 0.625rem 0.6rem;
+  }
+  .button {
+    width: 100%;
+    font-size: 1.1rem;
+    height: 42px;
+  }
+}
+
+@media (max-width: 500px) {
+  #cards {
+    width: 99%;
+    padding: 8px;
+    margin: 10px auto;
+  }
+  .place {
+    font-size: 0.97rem;
+    padding: 0.41rem;
+  }
+  .button {
+    font-size: 1rem;
+    height: 39px;
+  }
+}
+
+
+/* ___________________________________________________________HOME CARD_____________________________________________________________________________________ */
+
+.HomeCard{
+  background-Color:rgba(255, 255, 255, 0.768);
+  transition: transform 0.3s ease-in-out;
+
+
+}
+.HomeCard:hover{
+  transform: scale(1.02);
+}
+/* ____________________________ Fix Navbar Top Space in Mobile ____________________________ */
+
+/* Remove all default browser padding/margins */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent any horizontal sliding */
+}
+
+/* Ensure navbar always touches the top of the screen */
+#nav, #nav1, nav {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Adjust home section to not hide under navbar */
+.home-page {
+  padding-top: 70px;  /* match navbar height */
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #nav, #nav1, nav {
+    top: 0;
+  }
+
+  .home-page {
+    padding-top: 60px; /* slightly smaller offset for mobile nav height */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page {
+    padding-top: 50px;
+  }
+}
+
+/* _______________________________________________________________RecipeDetailCard_________________________________________________________________________________ */
+
+.RecipeDetailCard {
+  background-color: rgba(255, 255, 255, 0.768);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+.RecipeDetailCard:hover{
+  transform: scale(1.02);
+}
+
+/* Section Headers: Ingredients, Steps */
+.section-title {
+  font-weight: bold;
+  color: red;
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+/* Bordered content box under each title */
+.section-box {
+  background-Color:rgba(255, 255, 255, 0.415);
+  border-left: 5px solid red;
+  border-radius: 5px;
+  padding: 10px 15px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Labels like "Ingredients" and "Steps" */
+.section-label {
+  display: inline-block;
+
+  color: rgb(225,0,0);
+  font-weight: bold;
+  font-size: 18px;
+  padding: 4px 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* ____________________________________________________________________________________________________________________________________________________________________ */
+
+/* ___________________________________________________________________MyRecipeCard_______________________________________________________________________________________________ */
+.MyRecipeCard{
+  background-Color:rgba(255, 255, 255, 0.768);
+  transition: transform 0.3s ease-in-out;
+}
+.MyRecipeCard:hover{
+  transform: scale(1.02);
+}
+
+/* ___________________________________________________________________________________________________________________________________________________________________________________ */
+
+/* ______________________________________________________________________CreatedRecipe__________________________________________________________________________________________ */
+
+.CreatedRecipe{
+  background-Color:rgba(255, 255, 255, 0.768);
+  transition: transform 0.3s ease-in-out;
+}
+.CreatedRecipe:hover{
+  transform: scale(1.01);
+}
+.editbtn{
+  background-color: rgb(225,0,0);
+  color: white;
+  width: 80px;
+  height: 35px;
+  border: none;
+  border-radius: 7px;
+}
+.editbtn:hover{
+  border: 2px solid;
+  border-color: black;
+  color: white;
+}
+.editbtn:active{
+  transform: scale(1.02);
+  background-color: rgb(244, 140, 140);
+}
+.deletebtn{
+  background-color: rgb(225,0,0);
+  color: white;
+  width: 80px;
+  height: 35px;
+  border: none;
+  border-radius: 7px;
+}
+.deletebtn:hover{
+  border: 2px solid;
+  border-color: black;
+  color: white;
+}
+.deletebtn:active{
+  transform: scale(1.02);
+  background-color: rgb(244, 140, 140);
+}
+/* ___________________________________________________________________________________________________________________________________________________________________________________________________________ */
+
+/* _________________________________________________________________________EditCard_______________________________________________________________________________ */
+
+.EditCard{
+  background-Color:rgba(255, 255, 255, 0.768);
+  transition: transform 0.3s ease-in-out;
+}
+.EditCard:hover{
+  transform: scale(1.01);
+}
+
+  
+
+.button{
+  background-color: red;
+  
+  color: white;
+  width: 240px;
+  height: 42px;
+  border-radius: 7px;
+  position: relative;
+  left: 33px;
+  border: 0px;
+}
+.button:hover{
+  border: 2px solid;
+  border-color: black;
+}
+
+.button:active{
+  transform: scale(1.02);
+  background-color: rgb(244, 140, 140);
+}
+#view{
+  width: 200px;
+  height: 50px;
+}
+#card{
+  position: absolute;
+  left: 32%;
+  top: 60px;
+
+  border: 1px;
+  box-shadow: 0 0px 14px rgba(54, 49, 49, 0.98);
+  border-radius: 10px;
+
+}
+
+#cardt{
+  position: absolute;
+  left: 26%;
+  top: 30px;
+  border: 1px;
+  background-color: rgba(255, 255, 255, 0.164);
+  box-shadow: 0 0px 14px rgba(54, 49, 49, 0.98);
+  border-radius: 10px;
+  width: 700px;
+  height: 80vh;              /* fixed height relative to screen */
+}
+
+#login{
+  margin-left: 135px;
+}
+
+h3{
+  margin-left: 50px;
+}
+#nav{
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(255, 3, 3);
+  color: white;  
+}
+.Back{
+    width: 80px;
+    height: 35px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: red;
+    color: white;
+}
+.Back:hover{
+  border: 2px solid;
+  border-color: black;
+}
+
+.Back:active{
+  transform: scale(1.02);
+  background-color: rgb(244, 140, 140);
+}
+
+#food{
+  background-image: url('/src/images/recipe\ landing\ page\ image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  color: white;
+
+}
+
+#nav1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white ;
+  
+}
+.navbutton{
+  border: 2px;
+  background-color: white;
+}
+.para{
+  position: absolute;
+  top: 200px;
+  left: 60px;
+}
+.buttons{
+  background-color:rgba(230, 17, 17, 0.900);
+  color: white;
+  width: 200px;
+  height: 42px;
+  border-radius: 7px;
+  position: relative;
+  left: 28px;
+  border: 0px;
+}
+
+.home-page {
+ 
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+/* Search bar styles */
+.search-bar {
+  width: 370px;
+  height: 40px;
+  text-align: center; /* Center placeholder text */
+  border-radius: 20px;
+  border-color: none;
+  border: 2px solid #ccc;
+}
+
+
+/* Card styles */
+.cardm {
+  min-height: 400px; /* keep your taller cards */
+  border: 1px solid #ccc;
+  box-shadow: 0 0px 14px rgba(54, 49, 49, 0.98);
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+.col,
+.col-md-4 {
+  margin-bottom: 20px;
+}
+
+/* Card image fix */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: solid;
+  border-color: rgba(54, 49, 49, 0.362) ;
+}
+.cardcontent{
+  font-family: sans-serif;
+  margin-left: 30px;
+
+}
+#h{
+  margin-left:20px;
+}
+.content{
+  overflow: hidden;
+  overflow-y: auto;
+}
+#cardu{
+  width: 600px;
+  height: 800px;
+  position: absolute;
+  left: 30%;
+  top: 80px;
+
+  border: 1px;
+  box-shadow: 0 0px 14px rgba(54, 49, 49, 0.98);
+  border-radius: 10px;
+
+}
+.buttont{
+   background-color: red;
+  
+  color: white;
+  width: 240px;
+  height: 42px;
+  border-radius: 7px;
+  position: relative;
+  left: 33px;
+  border: 0px;
+}
+.buttont:hover{
+  border: 2px solid;
+  border-color: black;
+}
+
+.buttont:active{
+  transform: scale(1.02);
+  background-color: rgb(244, 140, 140);
+}
+
+/* ___________________________________________________________ProfileCard_______________________________________________________________________________________________________ */
+
+.ProfileCard{
+  transition: transform 0.3s ease-in-out;
+}
+.ProfileCard:hover{
+  transform: scale(1.01);
+}
+
+/* ___________________________________________________________PassCard______________________________________________________________________________________________________________ */
+
+.PassCard{
+  transition: transform 0.3s ease-in-out;
+}
+.PassCard:hover{
+  transform: scale(1.01);
+}
+  
+
+/* ________________________________________________________MyRecipes___________________________________________________________________________________ */
+
+.MyRecipes{
+  position: relative;
+  top: 90px;
+}
+
+/* _____________________________________________________________BACK________________________________________________________________________________________ */
+.back{
+  width: 80px;
+  height: 35px;
+  border-radius: 9px;
+  background-color: red;
+  color: white;
+  border: none;
+  position: absolute;
+  left: 5px;
+ 
+}
+
+.back:hover{
+  border: 2px solid;
+  border-color: black;
+}
+
+.back:active{
+  transform: scale(1.02);
+  background-color: rgb(244, 140, 140);
+}
+
+.BackH{
+  width: 250px;
+  height: 35px;
+  border-radius: 9px;
+  background-color: red;
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+.BackH:hover{
+  border: 2px solid;
+  border-color: black;
+}
+
+.BackH:active{
+  transform: scale(1.02);
+  background-color: rgb(244, 140, 140);
+}
+/* __________________________________________________________BACKGROUND IMAGE___________________________________________________________________________ */
+.img{
+  background-image: url('/src/images/HomePage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  /* color: white; */
+
+}
+
+/* ____________________________________________________________________NavbarToggleProblem_____________________________________________________________________________________________________ */
+
+
+
+/* ______________________ Navbar Style Enhancements ______________________ */
+
+/* For consistent link styling */
+.nav-link-custom {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.nav-link-custom:hover {
+  color: #f1f1f1;
+}
+
+/* Make logout visually identical to links */
+.logout-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+.logout-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Ensure perfect center alignment across all devices */
+.navbar-nav {
+  align-items: center;
+}
+
+/* Responsive fix for mobile alignment */
+@media (max-width: 768px) {
+  .nav-link-custom,
+  .logout-btn {
+    display: block;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 1.05rem;
+  }
+}
+
+/* ______________________ Navbar UI Enhancements ______________________ */
+
+/* Align all navbar items to the right properly */
+.navbar-nav {
+  margin-left: auto; /* Aligns links to the right corner */
+  align-items: center;
+}
+
+/* Consistent styling for both links and logout button */
+.nav-link-custom,
+.logout-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* Remove ALL underline effects */
+.nav-link-custom:hover,
+.logout-btn:hover,
+.nav-link-custom:focus,
+.logout-btn:focus {
+  color: #f1f1f1;
+  text-decoration: none !important;
+  outline: none;
+}
+
+/* Prevent white hover underline for logout (some browsers add it automatically) */
+.logout-btn::after {
+  content: none !important;
+}
+
+/* Mobile responsive link alignment */
+@media (max-width: 768px) {
+  .nav-link-custom,
+  .logout-btn {
+    display: block;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 1.05rem;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-brand h4 {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* ____________________________ Responsive Fix for Recipe Detail Page ____________________________ */
+
+/* Ensure card image fits perfectly without overflowing */
+.recipe-detail-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Adjust container and spacing on mid-sized devices */
+@media (max-width: 768px) {
+  .RecipeDetailCard {
+    width: 95%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  .recipe-detail-img {
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .RecipeDetailCard h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .section-label {
+    font-size: 16px;
+  }
+}
+
+/* Further responsive optimization for mobile phones */
+@media (max-width: 500px) {
+  .RecipeDetailCard {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .recipe-detail-img {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  p, h5 {
+    font-size: 0.95rem;
+  }
+}
+
+/* __________________________ Create Recipe Page Responsive Styling __________________________ */
+
+.create-card {
+  background-color: rgba(255, 255, 255, 0.82);
+  max-width: 750px;
+  width: 95%;
+  margin-top: 100px;
+  border-radius: 10px;
+  padding: 35px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+}
+.create-card:hover{
+  transform: scale(1.01);
+}
+
+
+.create-card h2 {
+  font-size: 1.8rem;
+}
+
+.section-box textarea {
+  width: 100%;
+  resize: vertical;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Image preview responsive */
+.create-img-preview {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Difficulty options spacing */
+.difficulty-options label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Tablet and mid-size devices */
+@media (max-width: 768px) {
+  .create-card {
+    width: 90%;
+    padding: 25px;
+    margin-top: 80px;
+
+  }
+
+  .create-card h2 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .create-img-preview {
+    max-width: 270px;
+  }
+
+  .button {
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 500px) {
+  .create-card {
+    width: 94%;
+    padding: 20px;
+  }
+
+  .create-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .create-img-preview {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  textarea {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.95rem;
+  }
+}
+
+.places{
+  width: 330px;
+}
+

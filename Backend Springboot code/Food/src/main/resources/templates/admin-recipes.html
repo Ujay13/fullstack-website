@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>All Recipes</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Use your admin-home.css or create admin-recipes.css with same styles -->
+    <link rel="stylesheet" th:href="@{/css/admin-recipes.css}">
+</head>
+<body>
+
+<nav id="nav" class="navbar navbar-expand-sm">
+    <div class="navbar-brand">
+      <h4>Recipes</h4>
+    </div>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      style="background: transparent; border: none; padding: 0;"
+    >
+      <!-- White hamburger icon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="white"
+      >
+        <rect y="4" width="24" height="2" />
+        <rect y="11" width="24" height="2" />
+        <rect y="18" width="24" height="2" />
+      </svg>
+    </button>
+
+    <div class="collapse navbar-collapse mr-auto" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a th:href="@{/admin/home}" style="color: white; text-decoration: none;">Home</a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a th:href="@{/admin/recipes}" style="color: white; text-decoration: none;">Recipes</a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a th:href="@{/admin/report}" style="color: white; text-decoration: none;">Report</a>
+        </li>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+          <a th:href="@{/admin/logout}" style="color: white; text-decoration: none;">Logout</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<br>
+
+<div class="container">
+    <center><h3 style="color: rgb(225,0,0);"><b>All Recipes</b></h3></center><br><br>
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr style="background-color: red; color: white;">
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Created By</th>
+                    <th>Views</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="recipe : ${recipes}">
+                    <td th:text="${recipe.id}">1</td>
+                    <td th:text="${recipe.title}">Sample Title</td>
+                    <td th:text="${recipe.user.fullname}">Created By</td>
+                    <td > <a th:href="@{/admin/recipetable/{id}(id=${recipe.id})}" class="linkcolor">
+					             <button class="tablebutton">View</button>
+					      </a> 
+					</td>
+					
+                    <td>
+                        
+                        <b><span th:text="${recipe.user.isBlock} ? 'Blocked' : 'Active'"
+                              th:style="${recipe.user.isBlock} ? 'color: red; margin-left: 10px;' : 'color: green; margin-left: 10px;'">
+                            Status
+                        </span></b>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <a th:href="@{/admin/home}" class="btn back">Back to Admin Home</a>
+    </div>
+</div>
+
+</body>
+</html>

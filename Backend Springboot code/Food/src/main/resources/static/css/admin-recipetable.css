@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.recipe-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(225, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border-top: 5px solid rgb(225, 0, 0);
+	transition: transform 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+	transform: scale(1.02);
+}
+
+.recipe-card h2 {
+    color: rgb(225, 0, 0);
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.image-container {
+    margin: 15px 0;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid rgb(225, 0, 0);
+    object-fit: cover;
+}
+
+p {
+    color: #333;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+strong {
+    color: rgb(225, 0, 0);
+}
+
+.btn-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    background: rgb(225, 0, 0);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back {
+    
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.back:hover {
+    border: 2px solid black;
+	color: white;
+}
+
+.back:active {
+    transform: scale(1.02);
+    background-color: rgb(255, 147, 147); /* slightly lighter red on click */
+}
+
+@media (max-width: 600px) {
+    .recipe-card {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%;
+    }
+}

@@ -1,0 +1,123 @@
+/* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #fff0f0, #ffe5e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: rgb(225, 0, 0);
+}
+
+.login-container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 16px rgba(225, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: rgb(225, 0, 0);
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 25px;
+    color:  rgba(225, 0, 0);
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: rgb(225, 0, 0);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(225, 0, 0);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: rgba(225, 0, 0);
+    box-shadow: 0 0 5px rgba(225, 0, 0, 0.5);
+}
+
+.btn {
+    background-color: rgb(225, 0, 0);
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back {
+    
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+.back:hover {
+    border: 2px solid black;
+	color: white;
+}
+
+.back:active {
+    transform: scale(1.02);
+    background-color: rgb(255, 147, 147); /* slightly lighter red on click */
+}
+
+.message {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.message.error {
+    color: #d00000;
+}
+
+.message.success {
+    color: #007700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}

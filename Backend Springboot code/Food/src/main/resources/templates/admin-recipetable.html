@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="/css/admin-recipetable.css">
+</head>
+<body>
+    <div class="container">
+        <div class="recipe-card">
+            <h2 th:text="${recipe.title}">Recipe Title</h2>
+
+            <div class="image-container">
+                <img th:src="@{${recipe.image}}" alt="Recipe Image">
+            </div>
+
+            <p><strong>Created By:</strong> <span th:text="${recipe.user.fullname}">User's Fullname</span></p>
+
+            <div class="btn-group">
+                <a href="/admin/recipes" class="btn back">Back to Recipes</a>
+                <a th:href="@{/admin/recipeview/{id}(id=${recipe.id})}" class="btn back">View</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
